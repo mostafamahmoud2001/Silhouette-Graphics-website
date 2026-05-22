@@ -1,0 +1,7 @@
+*.docx
+~$*.docx
+.DS_Store
+Thumbs.db
+.edge-profile*/
+.chrome-profile*/
+screenshots/
