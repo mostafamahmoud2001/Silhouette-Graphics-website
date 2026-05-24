@@ -20,6 +20,20 @@ navLinks.forEach((link) => {
   });
 });
 
+document.querySelectorAll("[data-scroll-top]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    nav?.classList.remove("open");
+    body.classList.remove("nav-open");
+    navToggle?.setAttribute("aria-expanded", "false");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+  });
+});
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {

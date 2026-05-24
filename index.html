@@ -28,7 +28,7 @@
       </button>
 
       <nav class="site-nav" id="site-nav" data-nav>
-        <a href="#home">Home</a>
+        <a href="#home" data-scroll-top>Home</a>
         <a href="#platform">SaaS Platform</a>
         <a href="#creators">Creators Corner</a>
         <a href="#about">About SGI</a>
@@ -44,7 +44,7 @@
         <div class="container hero-grid">
           <div class="hero-copy">
             <p class="eyebrow">Silhouette Graphics app publishing and creator technology</p>
-            <h1>You create the content. We handle the technology.</h1>
+            <h1>You create the content.<br>We handle the<br>technology.</h1>
             <p class="lead">
               Launch professional learning, training, productivity, or entertainment content from the material
               you already have. SGI turns structured documents into polished web and mobile app experiences.
@@ -56,72 +56,78 @@
             </div>
           </div>
 
-          <div class="product-stage" aria-label="SGI app publishing workflow preview">
-            <div class="device-panel">
-              <div class="device-top">
-                <span></span>
-                <span></span>
-                <span></span>
+          <div class="hero-feature-stack" aria-label="SGI app publishing workflow">
+            <article class="hero-feature-card">
+              <div class="hero-feature-icon">
+                <img src="assets/docx-media/image10.png" alt="">
               </div>
-              <div class="device-content">
-                <img src="assets/docx-media/image3.png" alt="" class="device-icon">
-                <div>
-                  <p class="panel-kicker">Word to app workflow</p>
-                  <h2>Content becomes a working app experience.</h2>
-                </div>
+              <div>
+                <h2>Author in Word</h2>
+                <p>Create quizzes, lessons, videos, links, images, study plans, onboarding, stories, or training material in a familiar document format.</p>
               </div>
-              <div class="workflow-bars">
-                <span style="--width: 86%"></span>
-                <span style="--width: 68%"></span>
-                <span style="--width: 76%"></span>
+            </article>
+            <article class="hero-feature-card">
+              <div class="hero-feature-icon">
+                <img src="assets/docx-media/image3.png" alt="">
               </div>
-              <div class="metric-strip">
-                <div>
-                  <strong>Mobile</strong>
-                  <small>Responsive delivery</small>
-                </div>
-                <div>
-                  <strong>Dashboards</strong>
-                  <small>Progress visibility</small>
-                </div>
+              <div>
+                <h2>Publish to web and app stores</h2>
+                <p>SGI converts structured content into responsive experiences for users on mobile and desktop.</p>
               </div>
-            </div>
-            <div class="floating-badge badge-analytics">
-              <img src="assets/docx-media/image4.png" alt="">
-              <span>Analytics ready</span>
-            </div>
-            <div class="floating-badge badge-rightpath">
-              <img src="assets/docx-media/image9.png" alt="">
-              <span>RightPath Method</span>
-            </div>
+            </article>
+            <article class="hero-feature-card">
+              <div class="hero-feature-icon">
+                <img src="assets/docx-media/image4.png" alt="">
+              </div>
+              <div>
+                <h2>Track and improve</h2>
+                <p>Creators can receive dashboards, engagement reports, progress data, and feedback loops where configured.</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section-band proof-band" aria-labelledby="home-support-title">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">From document to delivery</p>
-            <h2 id="home-support-title">A publishing framework for creators, trainers, and learning teams.</h2>
-          </div>
+      <section class="home-card-band" aria-labelledby="home-card-title">
+        <h2 class="sr-only" id="home-card-title">Silhouette Graphics support cards</h2>
+        <div class="container home-card-grid">
+          <article class="home-support-card">
+            <div class="support-icon">
+              <img src="assets/docx-media/image1.png" alt="">
+            </div>
+            <h3>Powered by SGI. Delivered through SkyMind.</h3>
+            <p>
+              Silhouette Graphic Independent develops the technology and publishing framework. SkyMind serves
+              as the learning platform where users access structured training, exam prep, creator content,
+              and interactive educational experiences.
+            </p>
+            <a href="#platform">Explore the platform <span aria-hidden="true">&rarr;</span></a>
+          </article>
 
-          <div class="feature-grid">
-            <article class="feature-card">
-              <img src="assets/docx-media/image10.png" alt="" class="feature-icon">
-              <h3>Author in Word</h3>
-              <p>Create quizzes, lessons, videos, links, images, study plans, onboarding, stories, or training material in a familiar format.</p>
-            </article>
-            <article class="feature-card">
-              <img src="assets/docx-media/image3.png" alt="" class="feature-icon">
-              <h3>Publish to web and app stores</h3>
-              <p>SGI converts structured content into responsive experiences for users on mobile and desktop.</p>
-            </article>
-            <article class="feature-card">
-              <img src="assets/docx-media/image4.png" alt="" class="feature-icon">
-              <h3>Track and improve</h3>
-              <p>Creators can receive engagement reports, progress data, and feedback loops where configured.</p>
-            </article>
-          </div>
+          <article class="home-support-card">
+            <div class="support-icon">
+              <img src="assets/docx-media/image9.png" alt="">
+            </div>
+            <h3>RightPath Method&trade;</h3>
+            <p>
+              Learning Done Right!&trade; Our exam prep experiences may use a guided active learning model
+              that turns assessments into training through concise content, embedded learning, and strategic
+              reinforcement.
+            </p>
+            <a href="#about">Learn where it fits <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="home-support-card">
+            <div class="support-icon">
+              <img src="assets/docx-media/image3.png" alt="">
+            </div>
+            <h3>Move Fast to market</h3>
+            <p>
+              Creators and training teams can start with the material they already have. SGI reduces technical
+              overhead so content can become a polished app experience faster.
+            </p>
+            <a href="#creators">Request creator access <span aria-hidden="true">&rarr;</span></a>
+          </article>
         </div>
       </section>
 
@@ -129,9 +135,9 @@
         <div class="container two-column">
           <div class="section-heading sticky-copy">
             <p class="eyebrow">Silhouette Graphics SaaS Series</p>
-            <h2>Turn your content into a professional app experience.</h2>
+            <h2>Turn your content into a professional <span class="nowrap">app experience.</span></h2>
             <p>
-              SGI provides cloud-based authoring, onboarding, and exam-prep delivery systems for mobile and desktop users.
+              We provide cloud-based authoring, onboarding and exam prep training content delivery systems for mobile and desktop users.
             </p>
             <a class="text-link" href="#creators">Start with creator access</a>
           </div>
@@ -148,21 +154,21 @@
               <span>2</span>
               <div>
                 <h3>SGI converts</h3>
-                <p>Structured material is formatted into a responsive app interface with repeatable publishing workflows.</p>
+                <p>Our backend formats your structured material into a responsive app interface using straight-through Python for accuracy.</p>
               </div>
             </article>
             <article class="process-step">
               <span>3</span>
               <div>
                 <h3>Learners access anywhere</h3>
-                <p>Your audience uses the content through mobile and web experiences designed for clear, focused learning.</p>
+                <p>Your users access the content on mobile or web.</p>
               </div>
             </article>
             <article class="process-step">
               <span>4</span>
               <div>
                 <h3>You monitor results</h3>
-                <p>Dashboards can show engagement, usage, progress, and performance where configured.</p>
+                <p>Dashboards show engagement, usage, progress, and performance where configured.</p>
               </div>
             </article>
           </div>
@@ -200,39 +206,77 @@
       </section>
 
       <section class="section-band creators-band" id="creators">
-        <div class="container">
-          <div class="section-heading centered">
-            <p class="eyebrow">Creators Corner</p>
-            <h2>Have expertise? Turn it into an app.</h2>
-            <p>
-              Silhouette Graphic Independent helps content creators publish structured educational, training,
-              exam-prep, and app-based content without building the technology themselves.
-            </p>
+        <div class="container creators-layout">
+          <div class="creators-intro">
+            <div class="section-heading creators-heading">
+              <p class="eyebrow">Creators Corner</p>
+              <h2>Have expertise? Turn it into an app.</h2>
+              <p>
+                Silhouette Graphic Independent helps content creators publish structured educational, training,
+                exam-prep, and app-based content without building the technology themselves.
+              </p>
+            </div>
+
+            <div class="creator-snapshot" aria-label="Creator publishing highlights">
+              <div>
+                <span>01</span>
+                <strong>Start with your material</strong>
+                <small>Word files, media, links, study plans, and questions.</small>
+              </div>
+              <div>
+                <span>02</span>
+                <strong>SGI handles the build</strong>
+                <small>App interface, publishing workflow, and delivery systems.</small>
+              </div>
+              <div>
+                <span>03</span>
+                <strong>Launch with structure</strong>
+                <small>Private onboarding keeps formatting and review organized.</small>
+              </div>
+            </div>
           </div>
 
           <div class="creator-grid">
-            <article class="feature-card">
-              <img src="assets/docx-media/image6.png" alt="" class="feature-icon">
-              <h3>What creators provide</h3>
-              <ul class="compact-list">
-                <li>Question sets, lessons, images, links, videos, study plans, and files</li>
-                <li>Logo and app identity materials</li>
-                <li>Iterative quality updates</li>
-              </ul>
+            <article class="feature-card creator-card">
+              <div class="creator-card-header">
+                <span class="creator-card-icon creator-card-icon-blue">
+                  <img src="assets/docx-media/image6.png" alt="">
+                </span>
+                <div>
+                  <small>Creator input</small>
+                  <h3>What creators provide</h3>
+                </div>
+              </div>
+              <div class="creator-card-body">
+                <ul class="compact-list">
+                  <li>Question sets, lessons, images, links, videos, study plans, and files</li>
+                  <li>Logo and app identity materials</li>
+                  <li>Iterative quality updates</li>
+                </ul>
+              </div>
             </article>
-            <article class="feature-card">
-              <img src="assets/docx-media/image1.png" alt="" class="feature-icon">
-              <h3>What SGI provides</h3>
-              <ul class="compact-list">
-                <li>Technology framework</li>
-                <li>Creator onboarding and publishing support</li>
-                <li>App interface, analytics, payment, and delivery infrastructure</li>
-              </ul>
+            <article class="feature-card creator-card">
+              <div class="creator-card-header">
+                <span class="creator-card-icon creator-card-icon-red">
+                  <img src="assets/docx-media/image1.png" alt="">
+                </span>
+                <div>
+                  <small>SGI support</small>
+                  <h3>What SGI provides</h3>
+                </div>
+              </div>
+              <div class="creator-card-body">
+                <ul class="compact-list">
+                  <li>Technology framework</li>
+                  <li>Creator onboarding and publishing support</li>
+                  <li>App interface, analytics, payment, and delivery infrastructure</li>
+                </ul>
+              </div>
             </article>
           </div>
 
-          <div class="form-grid">
-            <form class="contact-form" data-form="creator">
+          <div class="form-grid creator-access-grid">
+            <form class="contact-form creator-contact-card" data-form="creator">
               <div class="form-heading">
                 <h3>Request creator access</h3>
                 <p>Private requirements, formatting standards, onboarding details, and commission structure are shared after acceptance.</p>
@@ -259,14 +303,21 @@
                 <span>Message</span>
                 <textarea name="message" rows="5"></textarea>
               </label>
-              <button class="button button-red" type="submit">Request creator access</button>
+              <div class="creator-form-actions">
+                <button class="button button-red" type="submit">Request creator access</button>
+                <p>We will open your email app with the request ready to send.</p>
+              </div>
               <p class="form-status" role="status"></p>
             </form>
 
-            <form class="passcode-panel" data-passcode-form>
-              <img src="assets/docx-media/image7.png" alt="" class="passcode-icon">
-              <h3>Returning with a passcode?</h3>
-              <p>Enter your access code to continue to Creators Corner.</p>
+            <form class="passcode-panel creator-passcode-card" data-passcode-form>
+              <div class="passcode-heading">
+                <img src="assets/docx-media/image7.png" alt="" class="passcode-icon">
+                <div>
+                  <h3>Returning with a passcode?</h3>
+                  <p>Enter your access code to continue to Creators Corner.</p>
+                </div>
+              </div>
               <div class="passcode-inputs" aria-label="Creator access code">
                 <input inputmode="numeric" maxlength="1" aria-label="Digit 1">
                 <input inputmode="numeric" maxlength="1" aria-label="Digit 2">
