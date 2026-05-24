@@ -971,6 +971,20 @@ h3 {
   gap: 56px;
 }
 
+.about-band .two-column {
+  grid-template-columns: minmax(0, 1.22fr) minmax(340px, 0.78fr);
+  align-items: start;
+}
+
+.about-band .section-heading {
+  max-width: 760px;
+}
+
+.about-band .section-heading h2 {
+  max-width: 760px;
+  font-size: clamp(2.45rem, 4vw, 3.9rem);
+}
+
 .sticky-copy {
   position: sticky;
   top: 120px;
@@ -1293,6 +1307,9 @@ fieldset input {
 }
 
 .founder-block {
+  width: 100%;
+  max-width: 560px;
+  justify-self: end;
   padding: 30px;
 }
 
@@ -1315,9 +1332,25 @@ fieldset input {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
-  gap: 56px;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.82fr);
+  gap: 48px;
   align-items: start;
+}
+
+.contact-grid > .contact-form {
+  width: 100%;
+  max-width: 620px;
+  justify-self: end;
+}
+
+.contact-title {
+  max-width: 640px;
+  font-size: clamp(2.45rem, 3.75vw, 3.6rem);
+}
+
+.contact-title span {
+  display: block;
+  white-space: nowrap;
 }
 
 .contact-details {
@@ -1412,6 +1445,11 @@ fieldset input {
 
   .sticky-copy {
     position: static;
+  }
+
+  .founder-block {
+    max-width: none;
+    justify-self: stretch;
   }
 
   .brand-system,
@@ -1509,6 +1547,10 @@ fieldset input {
 
   .passcode-heading {
     align-items: flex-start;
+  }
+
+  .contact-title span {
+    white-space: normal;
   }
 
   .floating-badge {
