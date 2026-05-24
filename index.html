@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +8,18 @@
       content="Silhouette Graphics helps creators and organizations turn structured Word-based content into professional web and app experiences."
     >
     <title>Silhouette Graphics | App Publishing and Creator Technology</title>
+    <script>
+      (() => {
+        try {
+          const params = new URLSearchParams(window.location.search);
+          const requestedTheme = params.get("theme");
+          const theme = requestedTheme === "light" || requestedTheme === "dark" ? requestedTheme : localStorage.getItem("sgi-theme");
+          if (theme === "light") document.documentElement.dataset.theme = "light";
+        } catch (error) {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -20,13 +32,6 @@
         </span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
-        <span class="sr-only">Open navigation</span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
       <nav class="site-nav" id="site-nav" data-nav>
         <a href="#home" data-scroll-top>Home</a>
         <a href="#platform">SaaS Platform</a>
@@ -35,7 +40,24 @@
         <a href="#contact">Contact Us</a>
       </nav>
 
-      <a class="header-action" href="#contact">Contact Silhouette Graphics</a>
+      <div class="header-controls">
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" title="Switch to light mode" data-theme-toggle>
+          <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+          </svg>
+          <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M20.5 14.4A7.6 7.6 0 0 1 9.6 3.5a8.8 8.8 0 1 0 10.9 10.9Z"></path>
+          </svg>
+        </button>
+        <a class="header-action" href="#contact">Contact Silhouette Graphics</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="sr-only">Open navigation</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <main>

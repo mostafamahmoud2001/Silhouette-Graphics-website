@@ -1,10 +1,38 @@
 const body = document.body;
+const root = document.documentElement;
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
+const themeToggle = document.querySelector("[data-theme-toggle]");
 const navLinks = [...document.querySelectorAll(".site-nav a")];
 const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
+const themeStorageKey = "sgi-theme";
+
+const storeTheme = (theme) => {
+  try {
+    localStorage.setItem(themeStorageKey, theme);
+  } catch (error) {
+    // Storage can be unavailable in some privacy modes.
+  }
+};
+
+const applyTheme = (theme) => {
+  const nextTheme = theme === "light" ? "light" : "dark";
+  const isLight = nextTheme === "light";
+  root.dataset.theme = nextTheme;
+  themeToggle?.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+  themeToggle?.setAttribute("aria-pressed", String(isLight));
+  themeToggle?.setAttribute("title", isLight ? "Switch to dark mode" : "Switch to light mode");
+};
+
+applyTheme(root.dataset.theme);
+
+themeToggle?.addEventListener("click", () => {
+  const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
+  applyTheme(nextTheme);
+  storeTheme(nextTheme);
+});
 
 navToggle?.addEventListener("click", () => {
   const isOpen = nav?.classList.toggle("open");
